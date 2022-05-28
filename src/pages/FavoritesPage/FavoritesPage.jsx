@@ -2,6 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { Navigate } from 'react-router-dom';
 import CatCard from '../../components/CatCard/CatCard';
+import cry from '../../images/cry-cat.png'
+
+import s from './FavoritePage.module.scss';
 
 const FavoritesPage = () => {
     const data = useSelector(state => state.cats.likedData)
@@ -13,13 +16,18 @@ const FavoritesPage = () => {
     return (
         <>
             {data.length
-                ? data.map(cat => 
+                ? 
+                data.map(cat => 
                     <CatCard
                         key={cat.id} 
                         cat={cat}
                     /> 
                 )
-                : <h2>Добавьте любимого котика</h2>
+                : 
+                <div className={s.empty}>
+                    <img src={cry} alt="sad cat" className={s.img}/>
+                    <p className={s.text}>Выберите понравившегося котика</p>
+                </div>
             }
         </>
     );

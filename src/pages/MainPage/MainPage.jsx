@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { updateCats } from '../../store/catsSlice';
 import { fetchCats } from '../../services/fetchCats';
 import CatCard from '../../components/CatCard/CatCard';
+import Loader from '../../components/Loader/Loader';
 
 const MainPage = () => {
     const dispatch = useDispatch();
@@ -25,8 +26,9 @@ const MainPage = () => {
                         cat={cat}
                     />    
                 )
-                : <h2>Загрузка...</h2>
+                :  <Loader />
             }
+           
         </>
     );
 };

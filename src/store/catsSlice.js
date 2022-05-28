@@ -30,7 +30,6 @@ const catsSlice = createSlice({
                             addLikedCat(item)
                         }
                     } else if (item.id !== payload.id && payload.liked) {
-                        console.log(1)
                         removeLikedCat(payload.id)
                     }
                 })

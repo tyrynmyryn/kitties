@@ -1,0 +1,16 @@
+.loader {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    animation: 2s infinite rotate;
+}
+
+@keyframes rotate {
+    from {
+        transform: translateX(50%) translateY(-50%) rotate(0);
+    }
+
+    to {
+        transform: translateX(50%) translateY(-50%) rotate(360deg);
+    }
+}
