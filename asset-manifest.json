@@ -1,14 +1,17 @@
 {
   "files": {
-    "main.css": "/kitties/static/css/main.da2eaa24.css",
-    "main.js": "/kitties/static/js/main.e0938aff.js",
+    "main.css": "/kitties/static/css/main.dee95530.css",
+    "main.js": "/kitties/static/js/main.ae5365c8.js",
+    "static/media/cry-cat.png": "/kitties/static/media/cry-cat.18ffe036b8bb022911f2.png",
+    "static/media/image-loader.gif": "/kitties/static/media/image-loader.c517a3f80060c8026ad6.gif",
+    "static/media/loader.svg": "/kitties/static/media/loader.8032a325e20f7c6419edeb322506bb05.svg",
     "static/media/icons.svg": "/kitties/static/media/icons.d6169f82c74caad249f634faa61f4499.svg",
     "index.html": "/kitties/index.html",
-    "main.da2eaa24.css.map": "/kitties/static/css/main.da2eaa24.css.map",
-    "main.e0938aff.js.map": "/kitties/static/js/main.e0938aff.js.map"
+    "main.dee95530.css.map": "/kitties/static/css/main.dee95530.css.map",
+    "main.ae5365c8.js.map": "/kitties/static/js/main.ae5365c8.js.map"
   },
   "entrypoints": [
-    "static/css/main.da2eaa24.css",
-    "static/js/main.e0938aff.js"
+    "static/css/main.dee95530.css",
+    "static/js/main.ae5365c8.js"
   ]
 }
