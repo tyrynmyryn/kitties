@@ -19,19 +19,24 @@ const catsSlice = createSlice({
             })
         },
         toggleCat: (state, { payload }) => {
-            state.data.forEach(item => {
-                if (item.id === payload.id) {
-                    if (item.liked) {
-                        item.liked = false
+            if (state.data) {
+                state.data.forEach(item => {
+                    if (item.id === payload.id) {
+                        if (item.liked) {
+                            item.liked = false
+                            removeLikedCat(payload.id)
+                        } else if (!item.liked) {
+                            item.liked = true
+                            addLikedCat(item)
+                        }
+                    } else if (item.id !== payload.id && payload.liked) {
+                        console.log(1)
                         removeLikedCat(payload.id)
-                    } else if (!item.liked) {
-                        item.liked = true
-                        addLikedCat(item)
                     }
-                } else if (item.id !== payload.id && payload.liked) {
-                    removeLikedCat(payload.id)
-                }
-            })
+                })
+            } else {
+                removeLikedCat(payload.id)
+            }
             state.likedData = JSON.parse(window.localStorage.getItem('liked'))
         },
     }
