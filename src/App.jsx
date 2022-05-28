@@ -3,7 +3,7 @@ import Layout from './components/Layout/Layout';
 import MainPage from './pages/MainPage/MainPage';
 import FavoritesPage from './pages/FavoritesPage/FavoritesPage';
 import { 
-    BrowserRouter,
+    HashRouter,
     Routes,
     Route,
 } from 'react-router-dom';
@@ -18,14 +18,14 @@ const App = () => {
     }, [])
 
     return (
-        <BrowserRouter>
+        <HashRouter>
             <Routes>
                 <Route path='/' element={<Layout />}>
                     <Route index element={<MainPage />}/>
-                    <Route path='/favorites' element={<FavoritesPage />}/>
+                    <Route path='favorites' element={<FavoritesPage />}/>
                 </Route>
             </Routes>
-        </BrowserRouter>
+        </HashRouter>
     )
 };
 
