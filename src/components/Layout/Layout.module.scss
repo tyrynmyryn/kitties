@@ -1,0 +1,35 @@
+@import '../../styles/vars.scss';
+
+.container {
+    position: relative;
+    max-width: $container-size-large;
+    padding: $container-padding-large;
+    margin: 0 auto;
+    padding-top: 67px;
+    @media screen and (max-width: $container-size-medium) {
+        max-width: $container-size-medium;
+        padding: $container-padding-medium;
+        padding-top: 67px;
+    }
+    @media screen and (max-width: $container-size-small) {
+        max-width: $container-size-small;
+        padding: $container-padding-small;
+        padding-top: 67px;
+    }
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    column-gap: 48px;
+    row-gap: 52px;
+    padding: 36px 0 31px 0;
+    @media screen and (max-width: $container-size-medium) {
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 12px;
+        row-gap: 12px;
+    }
+    @media screen and (max-width: $container-size-small) {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

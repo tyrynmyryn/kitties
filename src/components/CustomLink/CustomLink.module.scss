@@ -1,0 +1,24 @@
+@import '../../styles/vars.scss';
+
+.link {
+    display: block;
+    padding: 23px;
+    font-size: 14px;
+    line-height: 21px;
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: .2s background-color, .2s color;
+    &:hover {
+        background-color: rgba($color-second, .7);
+        color: rgba(255, 255, 255, 0.9);
+    }
+    &:active {
+        background-color: $color-second;
+        color: rgba(255, 255, 255, 1);
+    }
+}
+
+.activeLink, .activeLink:hover {
+    background-color: $color-second;
+    color: rgba(255, 255, 255, 1);
+}
